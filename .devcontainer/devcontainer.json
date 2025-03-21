@@ -17,6 +17,9 @@
     "msjsdiag.debugger-for-chrome",
     "eamodio.gitlens"
   ],
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "forwardPorts": [3000],
   "postCreateCommand": "npm install"
 }
