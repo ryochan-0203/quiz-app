@@ -1,0 +1,22 @@
+{
+  "name": "Quiz App Development",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "msjsdiag.debugger-for-chrome",
+    "eamodio.gitlens"
+  ],
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install"
+}
