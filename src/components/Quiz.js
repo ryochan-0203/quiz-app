@@ -103,7 +103,6 @@ function Quiz() {
             <div class="breadcrumbs">
               <ol>
                 <li><a href="/">ホーム</a></li>
-                <li><a href={`/genres/${genreId}`}>ジャンルトップ</a></li>
               </ol>
             </div>
 
