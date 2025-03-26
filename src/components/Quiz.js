@@ -100,12 +100,19 @@ function Quiz() {
       <div className="container quiz-container">
         {!showExplanation ? (
           <>
+            <div class="breadcrumbs">
+              <ol>
+                <li><a href="/">ホーム</a></li>
+                <li><a href={`/genres/${genreId}`}>ジャンルトップ</a></li>
+              </ol>
+            </div>
+
             <div className="question-header">
               <h2>問{currentQuestionIndex + 1}</h2>
             </div>
             
             <div className="question-content">
-              <p className="question-text">{currentQuestion.text}</p>
+              <p className="question-text">{currentQuestion.question}</p>
             </div>
             
             <div className="answer-options">

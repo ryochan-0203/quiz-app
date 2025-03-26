@@ -37,7 +37,7 @@ function LevelSelection() {
   }, [genreId, navigate]);
 
   const isLevelUnlocked = (level) => {
-    const levels = ['初級', '中級', '上級'];
+    const levels = ['beginner', 'intermediate', 'advanced'];
     const levelIndex = levels.indexOf(level);
     
     // 初級は常に解放
@@ -64,18 +64,25 @@ function LevelSelection() {
 
   return (
     <div className="container">
-      <h1>レベル選択: {genre?.name}</h1>
+      <h1>{genre?.name}</h1>
       
-      {['初級', '中級', '上級'].map((level) => {
+      {['beginner', 'intermediate', 'advanced'].map((level) => {
         const unlocked = isLevelUnlocked(level);
+        // 日本語の難易度表示を設定
+        const levelJapanese = {
+          'beginner': '初級',
+          'intermediate': '中級',
+          'advanced': '上級'
+        };
+        
         return (
           <div 
             key={level} 
             className={`card ${!unlocked ? 'locked' : ''}`}
             onClick={() => unlocked && handleLevelSelect(level)}
           >
-            <h3>{level}</h3>
-            {!unlocked && <p>(前のレベルをクリアしてください)</p>}
+            <h3>{levelJapanese[level]}</h3>
+            {!unlocked }
           </div>
         );
       })}

@@ -67,7 +67,7 @@ function Result() {
         <div>
           {isPerfect ? (
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem', textAlign: 'center', color: '#2ecc71', fontWeight: 'bold' }}>
-              🎉 おめでとうございます！全問正解です！ 🎉
+              全問正解です！
             </p>
           ) : (
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem', textAlign: 'center', color: '#e74c3c', fontWeight: 'bold' }}>

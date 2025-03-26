@@ -9,7 +9,7 @@ function GenreSelection() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { logout } = useAuth();
-
+  
   useEffect(() => {
     async function fetchGenres() {
       try {
@@ -51,7 +51,7 @@ function GenreSelection() {
 
   return (
     <div className="container">
-      <h1>ジャンル選択</h1>
+      <h1>ジャンル</h1>
       {genres.length > 0 ? (
         genres.map(genre => (
           <div 
